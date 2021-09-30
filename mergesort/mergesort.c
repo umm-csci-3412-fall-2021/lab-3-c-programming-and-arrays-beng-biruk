@@ -13,11 +13,23 @@ int* subarray(int start, int end, int* input){
 }
 
 void mergesort(int size, int* to_sort) {
-  if (size <= 1) {
+  mergesortRange(0, size-1, to_sort);
+}
+
+void mergesortRange(int start, int end, int* to_sort) {
+  if (end - start <= 1) {
     return; // A single element or empty array is trivially/vacuously sorted
   }
   // This obviously doesn't actually do any *sorting*, so there's
   // certainly work still to be done.
-  int midpoint = floor((size-1)/2);
+  int midpoint = floor(((end + start)/2);
+  //int* leftslice = subarray(0, midpoint, to_sort);
+  //int* rightslice = subarray(midpoint+1, size-1, to_sort);
+  //int leftsize = midpoint + 1;
+  //int rightsize = size - leftsize; //to account for mergesorting an odd number of elements
+
+  int* slicesizes = (int*) malloc(2 * sizeof(int));
+  int** slicearray = (int**) malloc(sizeof(leftslice);
+  to_sort = array_merge
   return;
 }
